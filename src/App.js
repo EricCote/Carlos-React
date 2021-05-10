@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Counter from "./Counter";
+import Hello from "./Hello";
+import "./custom.scss";
+import { Container } from "reactstrap";
 
-function App() {
+import Time2 from "./Time";
+import Menu from "./Menu";
+//import YouTube from "./YouTube";
+
+let hello = <h1>Hello World</h1>;
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Joe was here!!!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Menu />
+      <Container>
+        {hello}
+        <Time2 />
+        <Hello />
+        <br />
+        <Counter init={5} />
+      </Container>
+    </>
   );
 }
 
-export default App;
+//FirstLetter Uppercase in JSX: Component
+//firstLetter lowercase in JSX: dom element
+
+//Fragment is just rendering its chidren, without a div wrapping
