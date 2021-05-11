@@ -35,7 +35,7 @@ const Menu = (props) => {
                 <NavLink href="#about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#counter1">Counter1</NavLink>
+                <NavLink href="#counter">Counter</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
