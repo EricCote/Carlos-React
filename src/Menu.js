@@ -7,13 +7,9 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
   Container,
 } from "reactstrap";
+import { NavLink as RRNavLink } from "react-router-dom";
 
 const Menu = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,13 +25,24 @@ const Menu = (props) => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="me-auto" navbar>
               <NavItem>
-                <NavLink href="#home">Home</NavLink>
+                <NavLink tag={RRNavLink} to="/" exact>
+                  Home
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#about">About</NavLink>
+                <NavLink tag={RRNavLink} to="/about">
+                  About
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#counter">Counter</NavLink>
+                <NavLink tag={RRNavLink} to="/counter">
+                  Counter
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={RRNavLink} to="/covid">
+                  Covid
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>

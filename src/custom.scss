@@ -1,3 +1,7 @@
 $body-bg: bisque;
 
 @import "~bootstrap/scss/bootstrap";
+
+.sr-only {
+  @include visually-hidden();
+}

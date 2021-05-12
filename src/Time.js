@@ -3,9 +3,11 @@ import React from "react";
 export default function Time() {
   const [time, setTime] = React.useState(new Date().toTimeString());
 
-  window.setTimeout(() => {
-    setTime(new Date().toTimeString());
-  }, 1000);
+  React.useEffect(() => {
+    window.setInterval(() => {
+      setTime(new Date().toTimeString());
+    }, 1000);
+  }, []);
 
   return <p>The time is: {time}</p>;
 }
